@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 BenchmarkDotNet.Running.BenchmarkRunner.Run<Bench>();
 
-[InvocationCount(10)]
+[InvocationCount(2)]
 [IterationCount(5)]
 public class Bench
 {
@@ -18,14 +18,13 @@ public class Bench
     }
 
     [Benchmark]
-    public async Task MSTest362()
+    public async Task MSTestStable()
     {
         await RunAsync($@"{_workingDir}\MSTestTests\bin\Debug\net9.0\MSTestTests.exe");
     }
 
     [Benchmark]
-    // checking if this known degradation has impact https://github.com/microsoft/testfx/issues/4132
-    public async Task MSTest343()
+    public async Task MSTestFixes()
     {
         await RunAsync($@"{_workingDir}\MSTest32\bin\Debug\net9.0\MSTest32.exe");
     }
