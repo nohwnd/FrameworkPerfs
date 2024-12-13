@@ -2,6 +2,7 @@
 using BenchmarkDotNet.Attributes;
 using System.Diagnostics;
 
+Environment.SetEnvironmentVariable("DOTNET_CLI_TELEMETRY_OPTOUT", "1");
 BenchmarkDotNet.Running.BenchmarkRunner.Run<Bench2>();
 
 [InvocationCount(1)]
