@@ -2,6 +2,7 @@
 using BenchmarkDotNet.Attributes;
 using System.Diagnostics;
 
+Environment.SetEnvironmentVariable("DOTNET_CLI_TELEMETRY_OPTOUT", "1");
 BenchmarkDotNet.Running.BenchmarkRunner.Run<Bench>();
 
 [InvocationCount(2)]
@@ -23,11 +24,6 @@ public class Bench
         await RunAsync($@"{_workingDir}\MSTestTests\bin\Debug\net9.0\MSTestTests.exe");
     }
 
-    [Benchmark]
-    public async Task MSTestFixes()
-    {
-        await RunAsync($@"{_workingDir}\MSTest32\bin\Debug\net9.0\MSTest32.exe");
-    }
 
     [Benchmark]
     public async Task XUnit()
