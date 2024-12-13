@@ -1,5 +1,7 @@
-﻿namespace NUnitTests;
+﻿[assembly: LevelOfParallelism(100)]
+[assembly: Parallelizable(ParallelScope.All)]
 
+namespace NUnitTests;
 
 public class MyTestClass1
 {

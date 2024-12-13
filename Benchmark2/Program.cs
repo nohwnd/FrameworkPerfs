@@ -5,8 +5,8 @@ using System.Diagnostics;
 Environment.SetEnvironmentVariable("DOTNET_CLI_TELEMETRY_OPTOUT", "1");
 BenchmarkDotNet.Running.BenchmarkRunner.Run<Bench2>();
 
-[InvocationCount(1)]
-[IterationCount(1)]
+[InvocationCount(2)]
+[IterationCount(2)]
 public class Bench2
 {
     string _workingDir = @"S:\t\FrameworkPerfs\";
