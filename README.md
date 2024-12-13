@@ -21,6 +21,7 @@ InvocationCount=2  IterationCount=5  UnrollFactor=1
 | MSTestStable | 483.6 ms |  14.97 ms |  2.32 ms |
 | XUnit        | 493.2 ms |  25.86 ms |  6.72 ms |
 | TUnit        | 529.1 ms |  18.38 ms |  4.77 ms |
+```
 
 ## Edit test and run 1000 tests
 
